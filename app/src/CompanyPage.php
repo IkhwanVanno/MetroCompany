@@ -14,11 +14,16 @@ namespace {
 
       class CompanyPage extends Page
       {
+            private static $allowed_children =[
+                  "PortoPage",
+            ];
+
+            private static $can_be_root = false;
+
             private static $has_many = [
                   'ServiceCards' => ServiceCard::class,
                   'PortfolioItems' => PortfolioItem::class,
                   'Testimonials' => Testimonial::class,
-                  'TeamMembers' => TeamMember::class,
             ];
 
             private static $has_one = [
@@ -30,7 +35,6 @@ namespace {
                   'ServiceCards',
                   'PortfolioItems',
                   'Testimonials',
-                  'TeamMembers',
                   'HeroImage',
                   'AboutImage',
             ];
@@ -68,10 +72,6 @@ namespace {
 
                   $fields->addFieldsToTab('Root.Testimonials', [
                         GridField::create('Testimonials', 'Testimoni', $this->Testimonials(), GridFieldConfig_RecordEditor::create())
-                  ]);
-
-                  $fields->addFieldsToTab('Root.Team', [
-                        GridField::create('TeamMembers', 'Anggota Tim', $this->TeamMembers(), GridFieldConfig_RecordEditor::create())
                   ]);
 
                   return $fields;

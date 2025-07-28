@@ -248,7 +248,7 @@
     <!-- Section Gallery -->
     <section class="d-flex align-items-center justify-content-center min-vh-100 px-3 px-md-5" id="gallery">
         <div class="container-fluid">
-            <div class="text-center mb-5">
+            <div class="mb-5">
                 <h5 class="text-muted mb-2">My Gallery</h5>
                 <h1 class="display-4 fw-bold">
                     This gallery shows the activities I've been doing,<br />

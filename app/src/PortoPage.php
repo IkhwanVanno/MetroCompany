@@ -9,7 +9,7 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\EmailField;
 
-class PortoPage extends SiteTree
+class PortoPage extends Page
 {
     private static $db = [
         'YourName' => 'Varchar(100)',

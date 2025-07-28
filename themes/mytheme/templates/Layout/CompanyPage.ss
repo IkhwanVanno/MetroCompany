@@ -121,18 +121,19 @@
             <div class="container">
             <h2 class="text-center mb-5">Tim Kami</h2>
             <div class="row g-4 justify-content-center">
-            <% loop $TeamMembers %>
+            <% loop $Children %>
             <div class="col-md-3 col-sm-6">
                   <div class="card text-center shadow-sm p-3">
                   <img
-                  src="$Photo.URL"
-                  alt="$Name.XML"
+                  src="$ProfileImage.URL"
+                  alt="$YourName.XML"
                   class="rounded-circle mx-auto"
                   style="width: 100px; height: 100px; object-fit: cover"
                   />
                   <div class="card-body">
-                  <h5 class="card-title mb-1">$Name.XML</h5>
-                  <p class="text-muted small">$Position.XML</p>
+                  <h5 class="card-title mb-1">$YourName.XML</h5>
+                  <p class="text-muted small">$Profession.XML</p>
+                  <a href="$Link">Portofolio ></a>
                   </div>
                   </div>
             </div>
