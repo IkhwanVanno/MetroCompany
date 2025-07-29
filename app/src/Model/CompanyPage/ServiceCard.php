@@ -13,7 +13,7 @@ class ServiceCard extends DataObject
     ];
 
     private static $has_one = [
-        'CompanyPage' => Page::class,
+        'CompanyPage' => CompanyPage::class,
     ];
 
     private static $summary_fields = [
@@ -31,8 +31,6 @@ class ServiceCard extends DataObject
 
     public function Link()
     {
-        return $this->CompanyPage()->Link('showservice/' . $this->ID);
-
+        return $this->CompanyPage()->Link('showService/' . $this->ID);
     }
-
 }

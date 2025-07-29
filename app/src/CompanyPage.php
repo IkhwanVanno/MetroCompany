@@ -14,7 +14,8 @@ namespace {
 
       class CompanyPage extends Page
       {
-            private static $allowed_children =[
+            private static $table_name = 'CompanyPage';
+            private static $allowed_children = [
                   "PortoPage",
             ];
 
@@ -32,13 +33,5 @@ namespace {
                   'PortofolioItem',
                   'Testimonials',
             ];
-
-            private static $db = [];
-
-            public function getCMSFields()
-            {
-                  $fields = parent::getCMSFields();
-                  return $fields;
-            }
       }
 }

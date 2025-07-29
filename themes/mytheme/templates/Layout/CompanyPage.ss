@@ -52,7 +52,7 @@
                   <div class="card-body text-center">
                   <h5 class="card-title">$Title.XML</h5>
                   <p class="card-text">$Content.XML</p>
-                  <a href="$Link" class="btn btn-primary mt-3">Lihat Detail</a>
+                  <a href="$Link" class="btn btn-primary mt-3">$Title</a>
                   </div>
                   </div>
             </div>

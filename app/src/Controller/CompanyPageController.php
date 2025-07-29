@@ -9,7 +9,7 @@ class CompanyPageController extends PageController
 {
     private static $allowed_actions = [
         'emailReceive' => true,
-        'showService',
+        'showService' => true,
     ];
 
     public function index()
@@ -22,13 +22,13 @@ class CompanyPageController extends PageController
             'Testimonials' => $Testimonials,
             'ServiceCards' => $ServiceCard,
             'PortofolioItem' => $PortofolioItem,
-            'PortoPage'=> $PortoPage,
+            'PortoPage' => $PortoPage,
         ])->renderWith(['CompanyPage', 'Page']);
     }
-    
-    public function showService(HTTPRequest $request) {
-        $id = $request->param('ID');
 
+    public function showService(HTTPRequest $request)
+    {
+        $id = $request->param('ID');
         $service = ServiceCard::get()->byID($id);
         if (!$service) {
             return $this->httpError(404, 'Service tidak ditemukan');
@@ -60,7 +60,6 @@ class CompanyPageController extends PageController
 
         return $this->redirectBack();
     }
-
 
     /**
      * Ambil data kontak untuk digunakan di template
