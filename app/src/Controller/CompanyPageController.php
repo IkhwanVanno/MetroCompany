@@ -14,13 +14,13 @@ class CompanyPageController extends PageController
 
     public function index()
     {
-        $Testimonials = Testimonial::get();
+        $Testimonial = Testimonial::get();
         $ServiceCard = ServiceCard::get();
         $PortofolioItem = PortofolioItem::get();
         $PortoPage = PortoPage::get();
         return $this->customise([
-            'Testimonials' => $Testimonials,
-            'ServiceCards' => $ServiceCard,
+            'Testimonial' => $Testimonial,
+            'ServiceCard' => $ServiceCard,
             'PortofolioItem' => $PortofolioItem,
             'PortoPage' => $PortoPage,
         ])->renderWith(['CompanyPage', 'Page']);

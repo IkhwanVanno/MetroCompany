@@ -46,7 +46,7 @@
             <div class="container">
             <h2 class="text-center mb-5">Layanan Kami</h2>
             <div class="row g-4">
-            <% loop $ServiceCards %>
+            <% loop $ServiceCard %>
             <div class="col-md-4">
                   <div class="card h-100 shadow-sm">
                   <div class="card-body text-center">
@@ -94,7 +94,7 @@
             <div class="container">
             <h2 class="text-center mb-5">Testimoni Klien</h2>
             <div class="row g-4">
-            <% loop $Testimonials %>
+            <% loop $Testimonial %>
             <div class="col-md-4">
                   <div class="card h-100 shadow-sm p-3">
                   <div class="d-flex align-items-center mb-3">
