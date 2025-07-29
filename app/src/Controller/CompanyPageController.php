@@ -2,6 +2,7 @@
 
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Control\Email\Email;
+use SilverStripe\Dev\Debug;
 use SilverStripe\SiteConfig\SiteConfig;
 
 class CompanyPageController extends PageController
@@ -13,7 +14,16 @@ class CompanyPageController extends PageController
 
     public function index()
     {
-        return $this->renderWith(['CompanyPage', 'Page']);
+        $Testimonials = Testimonial::get();
+        $ServiceCard = ServiceCard::get();
+        $PortofolioItem = PortofolioItem::get();
+        $PortoPage = PortoPage::get();
+        return $this->customise([
+            'Testimonials' => $Testimonials,
+            'ServiceCards' => $ServiceCard,
+            'PortofolioItem' => $PortofolioItem,
+            'PortoPage'=> $PortoPage,
+        ])->renderWith(['CompanyPage', 'Page']);
     }
     
     public function showService(HTTPRequest $request) {

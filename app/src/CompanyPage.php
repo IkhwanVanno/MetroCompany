@@ -18,11 +18,9 @@ namespace {
                   "PortoPage",
             ];
 
-            private static $can_be_root = false;
-
             private static $has_many = [
                   'ServiceCards' => ServiceCard::class,
-                  'PortfolioItems' => PortfolioItem::class,
+                  'PortofolioItem' => PortofolioItem::class,
                   'Testimonials' => Testimonial::class,
             ];
 
@@ -31,7 +29,7 @@ namespace {
 
             private static $owns = [
                   'ServiceCards',
-                  'PortfolioItems',
+                  'PortofolioItem',
                   'Testimonials',
             ];
 

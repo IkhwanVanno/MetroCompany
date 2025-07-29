@@ -8,6 +8,6 @@ class PortofolioItemAdmin extends ModelAdmin{
 
     private static $menu_icon = "";
     private static $managed_models = [
-        "PortfolioItem",
+        "PortofolioItem",
     ];
 }

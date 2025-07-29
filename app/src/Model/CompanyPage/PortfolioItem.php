@@ -7,7 +7,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
 
-class PortfolioItem extends DataObject {
+class PortofolioItem extends DataObject {
     private static $db = [
         'Title' => 'Varchar',
         'Description' => 'Text',

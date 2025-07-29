@@ -66,7 +66,7 @@
             <div class="container">
             <h2 class="text-center mb-5">Portfolio Kami</h2>
             <div class="row g-4">
-            <% loop $PortfolioItems %>
+            <% loop $PortofolioItem %>
             <div class="col-md-4 col-sm-6">
                   <% if $Image %>
                   <img
@@ -122,7 +122,7 @@
             <div class="container">
             <h2 class="text-center mb-5">Tim Kami</h2>
             <div class="row g-4 justify-content-center">
-            <% loop $Children %>
+            <% loop $PortoPage %>
             <div class="col-md-3 col-sm-6">
                   <div class="card text-center shadow-sm p-3">
                   <img
