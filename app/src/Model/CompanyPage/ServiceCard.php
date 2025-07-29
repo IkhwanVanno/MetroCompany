@@ -1,11 +1,12 @@
-<?php 
+<?php
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
 
-class ServiceCard extends DataObject {
+class ServiceCard extends DataObject
+{
     private static $db = [
         'Title' => 'Varchar',
         'Content' => 'Text',
@@ -20,10 +21,18 @@ class ServiceCard extends DataObject {
         'Content' => 'Deskripsi',
     ];
 
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         return FieldList::create([
             TextField::create('Title', 'Judul Layanan'),
             TextareaField::create('Content', 'Deskripsi Layanan')
         ]);
     }
+
+    public function Link()
+    {
+        return $this->CompanyPage()->Link('showservice/' . $this->ID);
+
+    }
+
 }

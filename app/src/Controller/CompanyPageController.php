@@ -8,7 +8,27 @@ class CompanyPageController extends PageController
 {
     private static $allowed_actions = [
         'emailReceive' => true,
+        'showService',
     ];
+
+    public function index()
+    {
+        return $this->renderWith(['CompanyPage', 'Page']);
+    }
+    
+    public function showService(HTTPRequest $request) {
+        $id = $request->param('ID');
+
+        $service = ServiceCard::get()->byID($id);
+        if (!$service) {
+            return $this->httpError(404, 'Service tidak ditemukan');
+        }
+
+        return $this->customise([
+            'CurrentService' => $service,
+            'Title' => $service->Title
+        ])->renderWith(['CompanyPage_showService', 'Page']);
+    }
 
     public function emailReceive(HTTPRequest $request)
     {

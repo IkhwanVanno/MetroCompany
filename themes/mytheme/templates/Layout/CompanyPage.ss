@@ -5,13 +5,13 @@
             <div class="carousel-inner">
             <div class="carousel-item active">
                   <img
-                  src="$HeroImage.URL"
+                  src="$SiteConfig.HeroImage.URL"
                   class="d-block w-100"
                   alt="Hero Image"
                   />
                   <div class="carousel-caption d-none d-md-block">
-                  <h1>$HeroTitle.XML</h1>
-                  <p>$HeroSubtitle.XML</p>
+                  <h1>$SiteConfig.HeroTitle.XML</h1>
+                  <p>$SiteConfig.HeroSubtitle.XML</p>
                   </div>
             </div>
             </div>
@@ -25,7 +25,7 @@
             <!-- Kiri: Gambar -->
             <div class="col-md-6 mb-4 mb-md-0">
                   <img
-                  src="$AboutImage.URL"
+                  src="$SiteConfig.AboutImage.URL"
                   alt="About Image"
                   class="img-fluid rounded shadow"
                   />
@@ -33,8 +33,8 @@
 
             <!-- Kanan: Teks -->
             <div class="col-md-6">
-                  <h2 class="mb-3">$AboutTitle.XML</h2>
-                  $AboutContent
+                  <h2 class="mb-3">$SiteConfig.AboutTitle.XML</h2>
+                  $SiteConfig.AboutContent
                   <a href="#contact" class="btn btn-primary mt-3">Hubungi Kami</a>
             </div>
             </div>
@@ -52,6 +52,7 @@
                   <div class="card-body text-center">
                   <h5 class="card-title">$Title.XML</h5>
                   <p class="card-text">$Content.XML</p>
+                  <a href="$Link" class="btn btn-primary mt-3">Lihat Detail</a>
                   </div>
                   </div>
             </div>
