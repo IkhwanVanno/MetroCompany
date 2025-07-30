@@ -31,6 +31,15 @@ class ServiceCard extends DataObject
 
     public function Link()
     {
-        return $this->CompanyPage()->Link('showService/' . $this->ID);
+        if ($this->CompanyPage() && $this->CompanyPage()->exists()) {
+            return $this->CompanyPage()->Link('showService/' . $this->ID);
+        }
+
+        $companyPage = CompanyPage::get()->first();
+        if ($companyPage) {
+            return $companyPage->Link('showService/' . $this->ID);
+        }
+
+        return '#';
     }
 }

@@ -11,6 +11,10 @@ class CompanyPageController extends PageController
         'emailReceive' => true,
         'showService' => true,
     ];
+    
+    private static $url_handlers = [
+        'showService/$ID' => 'showService'
+    ];
 
     public function index()
     {
